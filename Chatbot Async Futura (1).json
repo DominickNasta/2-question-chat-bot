@@ -1,0 +1,216 @@
+{
+  "name": "Chatbot Async Futura",
+  "category": "solve_problems",
+  "firstTrigger": "onFirstVisit",
+  "template": null,
+  "sandbox": 0,
+  "color": "",
+  "draftFromTemplate": 0,
+  "nodes": [
+    {
+      "id": 51823195,
+      "dbNodeId": 51823195,
+      "type": "decisionButtons",
+      "payload": {
+        "id": 3,
+        "x": 10454,
+        "y": 654.8031311035156,
+        "connections": {
+          "bottom": [],
+          "top": [
+            {
+              "nodeId": 4,
+              "routeId": "ef84d67c-f34d-42b4-afbb-3455588a5156",
+              "direction": "to"
+            },
+            {
+              "nodeId": 5,
+              "routeId": "31b76c69-2700-4b6e-a861-64ed0355b635",
+              "direction": "to"
+            }
+          ],
+          "left": [
+            {
+              "route": "1",
+              "nodeId": 6,
+              "routeId": "f2eeb4d7-41d1-4b2a-8d9f-0b2406273299",
+              "direction": "from"
+            }
+          ],
+          "right": [
+            {
+              "route": "2",
+              "nodeId": 7,
+              "routeId": "cab7e033-da03-4988-9b2c-b372ea3b0823",
+              "direction": "from"
+            }
+          ]
+        },
+        "customName": "",
+        "buttons": [
+          {
+            "id": 1,
+            "type": "action",
+            "title": "Im looking to hire",
+            "destination": 51823198
+          },
+          {
+            "id": 2,
+            "type": "action",
+            "title": "Im looking for a job",
+            "destination": 51823199
+          }
+        ],
+        "transferToOperatorMessageActive": true,
+        "text": "Welcome to Dominick's Chatbot, select an option below",
+        "1Node": 6,
+        "2Node": 7
+      }
+    },
+    {
+      "id": 51823196,
+      "dbNodeId": 51823196,
+      "type": "onRecurringVisitor",
+      "payload": {
+        "id": 4,
+        "x": 10577,
+        "y": 480.8031311035156,
+        "connections": {
+          "bottom": [
+            {
+              "nodeId": 3,
+              "routeId": "ef84d67c-f34d-42b4-afbb-3455588a5156",
+              "direction": "from"
+            }
+          ],
+          "top": [],
+          "left": [],
+          "right": []
+        },
+        "customName": "",
+        "frequency": "once24"
+      }
+    },
+    {
+      "id": 51823197,
+      "dbNodeId": 51823197,
+      "type": "onFirstVisit",
+      "payload": {
+        "id": 5,
+        "x": 10340,
+        "y": 485.8031311035156,
+        "connections": {
+          "bottom": [
+            {
+              "nodeId": 3,
+              "routeId": "31b76c69-2700-4b6e-a861-64ed0355b635",
+              "direction": "from"
+            }
+          ],
+          "top": [],
+          "left": [],
+          "right": []
+        },
+        "customName": ""
+      }
+    },
+    {
+      "id": 51823198,
+      "dbNodeId": 51823198,
+      "type": "decisionButtons",
+      "payload": {
+        "id": 6,
+        "x": 10169,
+        "y": 802.8031311035156,
+        "connections": {
+          "bottom": [],
+          "top": [
+            {
+              "nodeId": 3,
+              "routeId": "f2eeb4d7-41d1-4b2a-8d9f-0b2406273299",
+              "direction": "to"
+            }
+          ],
+          "left": [],
+          "right": []
+        },
+        "customName": "",
+        "text": "Great! here is a Github link to your top candidate!",
+        "buttons": [
+          {
+            "id": 1,
+            "type": "url",
+            "title": "Profile",
+            "payload": "https://github.com/DominickNasta",
+            "destination": null
+          }
+        ],
+        "transferToOperatorMessageActive": true
+      }
+    },
+    {
+      "id": 51823199,
+      "dbNodeId": 51823199,
+      "type": "decisionButtons",
+      "payload": {
+        "id": 7,
+        "x": 10710,
+        "y": 787.8031311035156,
+        "connections": {
+          "bottom": [],
+          "top": [
+            {
+              "nodeId": 3,
+              "routeId": "cab7e033-da03-4988-9b2c-b372ea3b0823",
+              "direction": "to"
+            }
+          ],
+          "left": [],
+          "right": []
+        },
+        "customName": "",
+        "text": "Great! here is a link to A listing from Async Futura!",
+        "buttons": [
+          {
+            "id": 1,
+            "type": "url",
+            "title": "Listing",
+            "payload": "https://www.linkedin.com/jobs/view/3769630617/?refId=9d90806b-e70e-48ed-b533-b57b8fd4b4e9&trackingId=azP8URLORnuuvSZHOjXFbw%3D%3D",
+            "destination": null
+          }
+        ],
+        "transferToOperatorMessageActive": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from_node_id": 51823195,
+      "to_node_id": 51823198,
+      "id": 63717551,
+      "dbEdgeId": 63717551,
+      "routeId": "f2eeb4d7-41d1-4b2a-8d9f-0b2406273299"
+    },
+    {
+      "from_node_id": 51823195,
+      "to_node_id": 51823199,
+      "id": 63717552,
+      "dbEdgeId": 63717552,
+      "routeId": "cab7e033-da03-4988-9b2c-b372ea3b0823"
+    },
+    {
+      "from_node_id": 51823196,
+      "to_node_id": 51823195,
+      "id": 63717553,
+      "dbEdgeId": 63717553,
+      "routeId": "ef84d67c-f34d-42b4-afbb-3455588a5156"
+    },
+    {
+      "from_node_id": 51823197,
+      "to_node_id": 51823195,
+      "id": 63717554,
+      "dbEdgeId": 63717554,
+      "routeId": "31b76c69-2700-4b6e-a861-64ed0355b635"
+    }
+  ]
+}
